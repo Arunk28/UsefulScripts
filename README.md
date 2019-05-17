@@ -9,7 +9,7 @@ app.controller('controller-name', ["ajaxService", function (ajaxService)
 var options = {
                 url: "serviceUrl",
                 type: "http-method-type",
-                postInfo: "{post-data}"                
+                postInfo: JSON.stringify({post-data})
             };  
             ajaxService.ajaxData(options).then(function (x) {
                 var data = angular.fromJson(x.data.d);              
